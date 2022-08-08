@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+@layer components {
+  .container {
+    @apply px-5 xl:max-w-[1130px] mx-auto;
+  }
+
+  .__mobile_label {
+    @apply text-sm text-gray inline-block mb-1;
+  }
+  .__mobile_input {
+    @apply border border-soft-gray outline-none bg-white h-[52px] px-3 rounded text-xl font-bold text-dark w-full;
+  }
+}
+
+.tooltip_shadow {
+  box-shadow: 0 0 40px rgb(0 0 0 / 30%);
+}
+
+button.react-calendar__navigation__label {
+  @apply text-xl font-bold text-dark pointer-events-none !bg-transparent hover:!bg-transparent;
+}
+
+.react-calendar__navigation__arrow {
+  @apply flex justify-center items-center !bg-transparent hover:!bg-transparent disabled:!opacity-20;
+}
+
+.react-calendar {
+  @apply !border-none !w-full;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  @apply text-[16px] leading-[19px] text-gray font-normal [&>*]:!no-underline capitalize;
+  /* text-transform: unset !important; */
+}
+.react-calendar__tile {
+  @apply min-w-[49px] min-h-[49px] max-w-[49px] max-h-[49px]  rounded-full shrink-0;
+}
+
+.react-calendar__month-view__days > button {
+  @apply text-dark;
+}
+
+.react-calendar__tile--now {
+  @apply !bg-soft-gray;
+}
+.react-calendar__tile--active {
+  @apply !bg-primary hover:!bg-primary !text-white;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: transparent;
+  pointer-events: none;
+  opacity: 0 !important;
+}
+
+[aria-label="Saturday"],
+[aria-label="Sunday"] {
+  @apply text-dark font-bold;
+}
+
+.info_contents_wrapper > * {
+  white-space: pre-wrap; /* CSS3 */
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -pre-wrap; /* Opera <7 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* IE */
+}
+.info_contents_wrapper {
+  @apply space-y-12;
+}
+.info_contents_wrapper .info-content__title {
+  @apply text-[20px] leading-[24px] font-bold text-dark mb-4;
+}
+.info_contents_wrapper p {
+  @apply text-[15px] leading-[23px] text-dark mb-4;
+}
+
+.info_contents_wrapper .bold {
+  @apply font-bold;
+}
+.info_contents_wrapper a {
+  @apply text-secondary hover:text-secondary-dark;
+}
