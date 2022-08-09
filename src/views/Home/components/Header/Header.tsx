@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SiteLogo from "@components/SiteLogo/SiteLogo";
 import React from "react";
 import HeaderSearchBar from "../HeaderSearchBar";
 
@@ -7,22 +7,7 @@ const Header = () => {
     <header className="hidden md:block">
       <div className="container flex justify-between h-[96px] gap-[100px]">
         {/* Logo --Start-- */}
-        <div>
-          <Link href="/">
-            <a className="flex pt-5 gap-4">
-              <img
-                src="/images/logoUdo.svg"
-                alt="Udo"
-                className="max-w-[116px]"
-              />
-              <img
-                src="/images/logo_addon_500.svg"
-                alt="addon"
-                className="max-w-[130px] inline-block -mt-8"
-              />
-            </a>
-          </Link>
-        </div>
+        <SiteLogo />
         {/* Logo --End-- */}
 
         <div className="h-full flex items-center grow">

@@ -21,6 +21,10 @@ export type SearchInRadiousOption = {
   label: string;
   value: string | number;
 };
+export type PriceType = {
+  label: string;
+  value: string | number;
+};
 
 export type SearchInradiusOptionsProps = {
   selected: SearchInRadiousOption;

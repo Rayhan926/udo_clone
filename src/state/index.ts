@@ -1,5 +1,5 @@
 import { searchInRadiousOptions } from "@config/constants";
-import { SearchInRadiousOption } from "@config/types";
+import { PriceType, SearchInRadiousOption } from "@config/types";
 import { atom, useAtom } from "jotai";
 
 const searchInputAtom = atom<string>("");
@@ -26,3 +26,15 @@ export const useSelectDate = () => useAtom(selectDateAtom);
 
 const openDateAtom = atom(false);
 export const useOpenDate = () => useAtom(openDateAtom);
+
+const activeCategoryAtom = atom<string | null>(null);
+export const useActiveCategory = () => useAtom(activeCategoryAtom);
+
+const priceAtom = atom<PriceType[]>([]);
+export const useSelectedPrice = () => useAtom(priceAtom);
+
+const onlineAtom = atom<PriceType[]>([]);
+export const useSelectedOnline = () => useAtom(onlineAtom);
+
+const subCategoriesAtom = atom<PriceType[]>([]);
+export const useSubCatogories = () => useAtom(subCategoriesAtom);

@@ -29,8 +29,6 @@ const MobileSearchInput = () => {
 
         <MobileSearchRadius />
       </div>
-
-      <MobileSearchhInputBottomSheet />
     </div>
   );
 };
@@ -79,26 +77,8 @@ const MobileSearchRadius = () => {
   );
 };
 
-const MobileSearchhInputBottomSheet = () => {
+export const MobileSearchhInputBottomSheet = () => {
   const [open, setOpen] = useOpenSearchSuggestionTooltip();
-  const [searchValue, setSearchValue] = useSearchInput();
-  const inputRef = useRef<HTMLInputElement>(null!);
-
-  const onSubmitHandler = (e: any) => {
-    console.log({ e });
-    e.preventDefault();
-    const value = inputRef.current.value.trim();
-
-    setSearchValue(value || "");
-    setOpen(false);
-  };
-
-  useEffect(() => {
-    if (open) {
-      inputRef.current.value = searchValue;
-      inputRef.current.focus();
-    }
-  }, [open]);
 
   return (
     <MobileBottomSheet
@@ -119,27 +99,62 @@ const MobileSearchhInputBottomSheet = () => {
         </div>
 
         <div className="p-4">
-          <form className="relative mb-7" onSubmit={onSubmitHandler}>
-            <input
-              placeholder="Adresse oder PLZ"
-              ref={inputRef}
-              type="text"
-              className="border border-soft-gray outline-none px-4 focus:border-primary duration-150 rounded-md py-3 w-full"
-            />
-
-            <button
-              type="button"
-              onClick={() => {
-                inputRef.current.value = "";
-              }}
-              className="absolute top-0 right-0 h-full flex items-center pr-3"
-            >
-              <IoCloseCircleOutline size={24} className="text-gray" />
-            </button>
-          </form>
+          <div className="mb-7">
+            <MobileSearchInputForm open={open} setOpen={setOpen} />
+          </div>
           <SearchSuggestionAndUseMyLocation className="!p-0" />
         </div>
       </div>
     </MobileBottomSheet>
+  );
+};
+
+export const MobileSearchInputForm = ({
+  open,
+  setOpen,
+  onCrossClick,
+}: {
+  open?: boolean;
+  setOpen?: (e: any) => void;
+  onCrossClick?: () => void;
+}) => {
+  const [searchValue, setSearchValue] = useSearchInput();
+  const inputRef = useRef<HTMLInputElement>(null!);
+
+  useEffect(() => {
+    if (open) {
+      inputRef.current.value = searchValue;
+      inputRef.current.focus();
+    }
+  }, [open]);
+
+  const onSubmitHandler = (e: any) => {
+    console.log({ e });
+    e.preventDefault();
+    const value = inputRef.current.value.trim();
+
+    setSearchValue(value || "");
+    setOpen && setOpen(false);
+  };
+  return (
+    <form className="relative" onSubmit={onSubmitHandler}>
+      <input
+        placeholder="Adresse oder PLZ"
+        ref={inputRef}
+        type="text"
+        className="border border-soft-gray outline-none px-4 focus:border-primary duration-150 rounded-md py-3 w-full"
+      />
+
+      <button
+        type="button"
+        onClick={() => {
+          inputRef.current.value = "";
+          onCrossClick && onCrossClick();
+        }}
+        className="absolute top-0 right-0 h-full flex items-center pr-3"
+      >
+        <IoCloseCircleOutline size={24} className="text-gray" />
+      </button>
+    </form>
   );
 };

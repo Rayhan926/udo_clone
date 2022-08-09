@@ -16,7 +16,7 @@ html {
 
 @layer components {
   .container {
-    @apply px-5 xl:max-w-[1130px] mx-auto;
+    @apply px-5 xl:max-w-[1248px] mx-auto;
   }
 
   .__mobile_label {
@@ -24,6 +24,13 @@ html {
   }
   .__mobile_input {
     @apply border border-soft-gray outline-none bg-white h-[52px] px-3 rounded text-xl font-bold text-dark w-full;
+  }
+
+  .category_style {
+    @apply outline-none px-[14px] py-[5px] rounded-full text-[15px] duration-100 text-dark hover:bg-soft-gray;
+  }
+  .category_style.active {
+    @apply !bg-primary !text-white hover:!bg-primary;
   }
 }
 
@@ -95,4 +102,19 @@ button.react-calendar__navigation__label {
 }
 .info_contents_wrapper a {
   @apply text-secondary hover:text-secondary-dark;
+}
+
+.animate_slidein {
+  animation: animate_slidein 0.4s;
+}
+
+@keyframes animate_slidein {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  110% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

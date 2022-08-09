@@ -1,4 +1,9 @@
-import { FooterLink, SearchInRadiousOption, SocialLink } from "@config/types";
+import {
+  FooterLink,
+  PriceType,
+  SearchInRadiousOption,
+  SocialLink,
+} from "@config/types";
 import classnames from "classnames";
 
 export const cx = classnames;
@@ -129,4 +134,109 @@ export const agbTableOfContents = [
   "Beendigung",
   "Sonstiges",
   "Kontakt",
+];
+
+export const prices: PriceType[] = [
+  {
+    label: "Free",
+    value: "",
+  },
+  {
+    label: "€",
+    value: "€",
+  },
+  {
+    label: "€€",
+    value: "€€",
+  },
+  {
+    label: "€€€",
+    value: "€€€",
+  },
+];
+
+export const onlineOptions: PriceType[] = [
+  {
+    label: "Online",
+    value: "online",
+  },
+  {
+    label: "Offline",
+    value: "offline",
+  },
+];
+
+export const subCategoriesOptions: PriceType[] = [
+  {
+    label: "Aussichtsplattformen",
+    value: "Aussichtsplattformen",
+  },
+  {
+    label: "Autokino",
+    value: "Autokino",
+  },
+  {
+    label: "Beachvolleyball",
+    value: "Beachvolleyball",
+  },
+  {
+    label: "Bikepark",
+    value: "Bikepark",
+  },
+  {
+    label: "Extremsport",
+    value: "Extremsport",
+  },
+  {
+    label: "Freibäder / Seen",
+    value: "Freibäder / Seen",
+  },
+  {
+    label: "Freizeitparks",
+    value: "Freizeitparks",
+  },
+  {
+    label: "Garten",
+    value: "Garten",
+  },
+  {
+    label: "Grillplatz",
+    value: "Grillplatz",
+  },
+  {
+    label: "Klettersport",
+    value: "Klettersport",
+  },
+  {
+    label: "Motorsport",
+    value: "Motorsport",
+  },
+  {
+    label: "Parks",
+    value: "Parks",
+  },
+  {
+    label: "Rodelbahn",
+    value: "Rodelbahn",
+  },
+  {
+    label: "Schlößer / Burgen",
+    value: "Schlößer / Burgen",
+  },
+  {
+    label: "Sehenswürdigkeiten",
+    value: "Sehenswürdigkeiten",
+  },
+  {
+    label: "Skatepark",
+    value: "Skatepark",
+  },
+  {
+    label: "Spielplätze",
+    value: "Spielplätze",
+  },
+  {
+    label: "Stadtführungen",
+    value: "Stadtführungen",
+  },
 ];

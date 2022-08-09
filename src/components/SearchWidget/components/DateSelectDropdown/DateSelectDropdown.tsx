@@ -25,7 +25,7 @@ const DateSelectDropdown = () => {
       <Tootlip
         open={isOpen}
         onClose={() => setIsOpen(false)}
-        className="top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[150%]"
+        className="top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[328px]"
       >
         <CalendarComponent
           onSelect={(date) => {
