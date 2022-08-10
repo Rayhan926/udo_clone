@@ -22,6 +22,7 @@ const ResultPageHeader = () => {
       </header>
 
       <ResultsPageMobileHeader />
+      <div className="h-[105px] md:hidden"></div>
     </>
   );
 };
@@ -91,6 +92,7 @@ const HeaderCategories = () => {
                 const isActive = activeCategory === category;
                 return (
                   <button
+                    key={i}
                     onClick={() => setActiveCategory(category)}
                     className={cx(
                       "w-full category_style py-2 text-left rounded-none",

@@ -1,6 +1,7 @@
 import MobileBottomSheet from "@components/MobileBottomSheet";
 import SearchInradiusOptions from "@components/SearchWidget/components/SearchInradiusOptions";
 import SearchSuggestionAndUseMyLocation from "@components/SearchWidget/components/SearchSuggestionAndUseMyLocation";
+import { cx } from "@config/constants";
 import {
   useOpenSearchRadius,
   useOpenSearchSuggestionTooltip,
@@ -11,7 +12,7 @@ import React, { useEffect, useRef } from "react";
 import { IoMdClose } from "react-icons/io";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
-const MobileSearchInput = () => {
+const MobileSearchInput = ({ inputClass }: { inputClass?: string }) => {
   const [, setOpen] = useOpenSearchSuggestionTooltip();
   const [searchValue] = useSearchInput();
   return (
@@ -23,7 +24,10 @@ const MobileSearchInput = () => {
           type="text"
           onClick={() => setOpen(true)}
           readOnly
-          className="__mobile_input pr-[64px] placeholder:font-normal placeholder:text-lg placeholder:text-gray"
+          className={cx(
+            "__mobile_input pr-[64px] placeholder:font-normal placeholder:text-lg placeholder:text-gray",
+            inputClass,
+          )}
           value={searchValue}
         />
 
@@ -149,6 +153,7 @@ export const MobileSearchInputForm = ({
         type="button"
         onClick={() => {
           inputRef.current.value = "";
+          setSearchValue("");
           onCrossClick && onCrossClick();
         }}
         className="absolute top-0 right-0 h-full flex items-center pr-3"

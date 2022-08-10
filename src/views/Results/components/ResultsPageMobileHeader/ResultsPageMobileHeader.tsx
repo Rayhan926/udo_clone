@@ -12,12 +12,12 @@ const ResultsPageMobileHeader = () => {
   const [, setOpen] = useOpenSearchSuggestionTooltip();
   return (
     <header
-      className="fixed top-0 left-0 w-full bg-white z-[9999]"
+      className="fixed top-0 left-0 w-full bg-white z-[9999] md:hidden"
       style={{ boxShadow: "0 3px 6px rgb(0 0 0 / 10%)" }}
     >
       <div>
         <div className="flex justify-between items-center py-5 container">
-          <button onClick={() => setOpen(true)}>
+          <button className="text-gray" onClick={() => setOpen(true)}>
             <GoLocation size={22} />
           </button>
           <Link href={"/"}>
@@ -29,7 +29,10 @@ const ResultsPageMobileHeader = () => {
               />
             </a>
           </Link>
-          <button onClick={() => setIsOpenSearch((prev) => !prev)}>
+          <button
+            className="text-gray"
+            onClick={() => setIsOpenSearch((prev) => !prev)}
+          >
             <BsSearch size={21} />
           </button>
         </div>

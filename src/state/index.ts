@@ -38,3 +38,9 @@ export const useSelectedOnline = () => useAtom(onlineAtom);
 
 const subCategoriesAtom = atom<PriceType[]>([]);
 export const useSubCatogories = () => useAtom(subCategoriesAtom);
+
+const openFilterModalAtom = atom(false);
+export const useOpenFilterModal = () => useAtom(openFilterModalAtom);
+
+const selectOpenFilter = atom(false);
+export const useSelectOpenFilter = () => useAtom(selectOpenFilter);

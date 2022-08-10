@@ -3,8 +3,9 @@ import CalendarComponent from "@components/SearchWidget/components/CalendarCompo
 import { useOpenDate, useSelectDate } from "@state";
 import React from "react";
 import { format } from "date-fns";
+import { cx } from "@config/constants";
 
-const MobileDateInput = () => {
+const MobileDateInput = ({ inputClass }: { inputClass?: string }) => {
   const [open, setOpen] = useOpenDate();
   const [selectedDate, setSelectedDate] = useSelectDate();
 
@@ -16,21 +17,11 @@ const MobileDateInput = () => {
           <input
             type="text"
             readOnly
-            className="__mobile_input pr-[64px]"
+            className={cx("__mobile_input pr-[64px]", inputClass)}
             value={`${format(selectedDate, "dd MMM")}.`}
           />
         </div>
       </div>
-
-      <MobileBottomSheet open={open} onClose={() => setOpen(false)}>
-        <CalendarComponent
-          onSelect={(date) => {
-            setSelectedDate(date);
-            setOpen(false);
-          }}
-          value={selectedDate}
-        />
-      </MobileBottomSheet>
     </div>
   );
 };

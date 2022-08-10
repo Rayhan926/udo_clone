@@ -18,6 +18,19 @@ html {
   .container {
     @apply px-5 xl:max-w-[1248px] mx-auto;
   }
+  .container-sm {
+    @apply px-5 xl:max-w-[1100px] mx-auto;
+  }
+  .container-lg {
+    @apply px-5 xl:max-w-[1450px] mx-auto;
+  }
+
+  .text_shadow {
+    text-shadow: 0 3px 10px rgb(0 0 0 / 50%);
+  }
+  .details_pae_btn_shadow {
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  }
 
   .__mobile_label {
     @apply text-sm text-gray inline-block mb-1;
@@ -31,6 +44,10 @@ html {
   }
   .category_style.active {
     @apply !bg-primary !text-white hover:!bg-primary;
+  }
+
+  .__share_icon {
+    @apply px-3 py-[7px] hover:bg-gray/10 hover:border-gray/30 duration-150 cursor-pointer rounded-2xl border border-soft-gray shrink-0;
   }
 }
 

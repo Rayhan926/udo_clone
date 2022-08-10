@@ -21,7 +21,7 @@ const SubCategorySelect = () => {
     });
   };
   return (
-    <div className="relative">
+    <div className="relative inline-block">
       <div
         className={cx(
           "outline-none border-none overflow-hidden rounded-full flex items-center text-[15px]",
@@ -57,9 +57,9 @@ const SubCategorySelect = () => {
       <Tootlip
         open={isOpen}
         onClose={() => setIsOpen(false)}
-        className="bottom-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[230px]"
+        className="bottom-[calc(100%+8px)] left-0 lg:left-1/2 lg:-translate-x-1/2 w-[230px]"
       >
-        <div className="max-h-[50vh] overflow-y-auto rounded-2xl">
+        <div className="max-h-[40vh] md:max-h-[50vh] overflow-y-auto rounded-2xl">
           {subCategoriesOptions.map((subcategory, i) => {
             const isActive = selectedSubCategories.find(
               (e) => e.value === subcategory.value,

@@ -1,6 +1,7 @@
 import { cx } from "@config/constants";
 import { MobileBottomSheetProps } from "@config/types";
 import React, { useEffect, useRef } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const MobileBottomSheet = ({
   onClose,
@@ -10,10 +11,12 @@ const MobileBottomSheet = ({
 }: MobileBottomSheetProps) => {
   const bottomSheetOverlayRef = useRef<HTMLDivElement>(null!);
 
+  const overlayId = uuidv4();
+
   useEffect(() => {
     const shouldClose = (e: any) => {
       console.log("first");
-      if (e.target.id === "bottom_sheet_overly") {
+      if (e.target.id === overlayId) {
         onClose();
       }
     };
@@ -23,11 +26,11 @@ const MobileBottomSheet = ({
     return () => {
       bottomSheetOverlayRef.current?.removeEventListener("click", shouldClose);
     };
-  }, []);
+  }, [overlayId]);
 
   return (
     <div
-      id="bottom_sheet_overly"
+      id={overlayId}
       ref={bottomSheetOverlayRef}
       className={cx(
         "fixed top-0 left-0 w-full h-screen overflow-hidden bg-black/40 z-[99999] flex items-end duration-200",
