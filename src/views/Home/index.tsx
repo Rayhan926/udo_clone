@@ -5,12 +5,20 @@ import CategoriesSection from "./components/CategoriesSection";
 import Header from "./components/Header";
 import MobileView from "./components/MobileView";
 import { useWindowWidth } from "@react-hook/window-size";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Home = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const onlyWidth = useWindowWidth();
+
+  useEffect(() => {
+    setIsMobile(onlyWidth < 768);
+  }, [onlyWidth]);
+
   return (
     <>
-      {onlyWidth > 768 ? (
+      {!isMobile ? (
         <>
           <Header />
           <SearchWidget />
