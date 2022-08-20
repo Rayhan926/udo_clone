@@ -34,12 +34,14 @@
       "@widgets": ["src/widgets"],
       "@hooks/*": ["src/hooks/*"],
       "@hooks": ["src/hooks"],
-      "@state/*": ["src/state/*"],
       "@state": ["src/state"],
+      "@state/*": ["src/state/*"],
       "@assets/*": ["src/assets/*"],
       "@assets": ["src/assets"],
       "@config/*": ["src/config/*"],
-      "@config": ["src/config"]
+      "@config": ["src/config"],
+      "@client": ["src/client"],
+      "@client/*": ["src/client/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

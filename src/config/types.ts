@@ -25,6 +25,10 @@ export type PriceType = {
   label: string;
   value: string | number;
 };
+export type CategoryType = {
+  label: string;
+  value: string | number;
+};
 
 export type SearchInradiusOptionsProps = {
   selected: SearchInRadiousOption;

@@ -18,12 +18,28 @@ import WeatherComponent from "./components/WeatherComponent";
 import { format } from "date-fns";
 import { cx } from "@config/constants";
 import ResultsPageShare from "./components/ResultsPageShare";
+import { useRouter } from "next/router";
+import { useQuery } from "react-query";
+import client from "../../client";
+import NoResultFound from "@components/NoResultFound";
 
-const Results = () => {
+const Results = ({ data }: any) => {
+  const router = useRouter();
   const [, setIsOpen] = useOpenFilterModal();
   const [selectedDate] = useSelectDate();
   const [, setOpenDateSelect] = useOpenDate();
   const [isOpenSelected, setIsOpenSelected] = useSelectOpenFilter();
+
+  const { data: clientData } = useQuery(
+    "get-results",
+    () => client.get(`/frontend/city/?city=${router.query?.city}`),
+    {
+      enabled: !!router.query?.city,
+      retry: false,
+    },
+  );
+
+  console.log({ clientData });
   return (
     <>
       <ResultPageHeader />
@@ -34,7 +50,7 @@ const Results = () => {
       {/** Only visible on Desktop --Start-- */}
       <div className="hidden md:flex justify-between items-center container mt-12 gap-[200px]">
         <h1 className="text-[36px] leading-[44px] text-dark font-bold">
-          Freizeitangebote in Mannheim
+          Freizeitangebote in {router.query?.city}
         </h1>
 
         <HeaderSearchBar />
@@ -95,11 +111,15 @@ const Results = () => {
       {/** Only visible on mobile --End-- */}
 
       <section className="mt-6">
-        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {[...new Array(9).keys()].map((e) => (
-            <ResultCard key={e} id={e} />
-          ))}
-        </div>
+        {data?.length > 0 ? (
+          <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {data.map((e: any, i: number) => (
+              <ResultCard {...e} key={i} id={i} />
+            ))}
+          </div>
+        ) : (
+          <NoResultFound />
+        )}
       </section>
       <Footer />
     </>

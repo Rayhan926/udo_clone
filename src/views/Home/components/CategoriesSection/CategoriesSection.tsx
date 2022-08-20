@@ -7,10 +7,10 @@ const CategoriesSection = () => {
       <div className="container">
         <h2 className="mb-1.5 text-2xl text-dark font-bold">Kategorien</h2>
         <ul className="columns-3">
-          {categories.map((category, i) => (
+          {categories.slice(1, categories.length).map((category, i) => (
             <li key={i}>
               <button className="outline-none text-[16px] leading-[42px]  font-medium text-dark">
-                {category}
+                {category.label}
               </button>
             </li>
           ))}

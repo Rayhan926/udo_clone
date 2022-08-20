@@ -1,12 +1,13 @@
 import Footer from "@components/Footer";
-import MobileBottomSheet from "@components/MobileBottomSheet";
-import React, { useState } from "react";
+import { useFormSubmit } from "@state";
+import React from "react";
 import MobileChildrenSelelct from "./components/MobileChildrenSelelct";
 import MobileDateInput from "./components/MobileDateInput";
 import MobileHeader from "./components/MobileHeader";
 import MobileSearchInput from "./components/MobileSearchInput";
 
 const MobileView = () => {
+  const { formSubmitHandler } = useFormSubmit();
   return (
     <main className="min-h-screen flex flex-col">
       <div className="grow">
@@ -24,6 +25,7 @@ const MobileView = () => {
             <MobileChildrenSelelct />
 
             <button
+              onClick={formSubmitHandler}
               type="submit"
               className="w-full outline-none bg-primary hover:bg-primary-dark py-2.5 px-3 rounded-[16px] text-lg text-white font-bold !mt-12"
             >

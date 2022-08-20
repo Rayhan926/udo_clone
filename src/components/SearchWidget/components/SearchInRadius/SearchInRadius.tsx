@@ -11,6 +11,7 @@ const SearchInRadius = () => {
     <div className="relative pr-6">
       <button
         onClick={() => setisOpen(true)}
+        type="button"
         className="rounded-full bg-secondary hover:bg-secondary-dark duration-100 text-white py-1 px-3"
       >
         {selected.label}

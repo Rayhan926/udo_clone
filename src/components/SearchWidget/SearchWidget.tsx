@@ -1,10 +1,18 @@
 import { cx } from "@config/constants";
+import {
+  useFormSubmit,
+  useOpenSearchSuggestionTooltip,
+  useSearchInput,
+} from "@state";
+import { useRouter } from "next/router";
 import React from "react";
 import AddressOrZipCodeInput from "./components/AddressOrZipCodeInput";
 import ChildrenDropdown from "./components/ChildrenDropdown/ChildrenDropdown";
 import DateSelectDropdown from "./components/DateSelectDropdown";
 
 const SearchWidget = ({ heightSmall }: { heightSmall?: boolean }) => {
+  const { formSubmitHandler } = useFormSubmit();
+
   return (
     <section className="relative z-[2]">
       <div className="container px-0 max-w-full md:px-5 xl:max-w-[calc(1235px+40px)]">
@@ -25,7 +33,8 @@ const SearchWidget = ({ heightSmall }: { heightSmall?: boolean }) => {
               Die Freizeitsuchmaschine
             </h1>
 
-            <div
+            <form
+              onSubmit={formSubmitHandler}
               className={cx(
                 "mt-4 grid",
                 heightSmall
@@ -39,12 +48,15 @@ const SearchWidget = ({ heightSmall }: { heightSmall?: boolean }) => {
 
               {!heightSmall && (
                 <div className="pl-[15px] w-full">
-                  <button className="h-16 rounded-[10px] bg-primary hover:bg-primary-dark duration-150 font-semibold text-lg px-6 text-white w-full">
+                  <button
+                    type="submit"
+                    className="h-16 rounded-[10px] bg-primary hover:bg-primary-dark duration-150 font-semibold text-lg px-6 text-white w-full"
+                  >
                     Finden
                   </button>
                 </div>
               )}
-            </div>
+            </form>
 
             {!heightSmall && (
               <h2 className="text-[21px] leading-[30px] text-white font-semibold mt-5 text-center">

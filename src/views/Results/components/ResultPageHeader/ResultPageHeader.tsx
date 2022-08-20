@@ -51,27 +51,21 @@ const HeaderCategories = () => {
   );
 
   const isDropdwonActive =
-    __categories_inside_dropdow.filter((e) => e === activeCategory).length > 0;
+    __categories_inside_dropdow.filter((e) => e.value === activeCategory?.value)
+      .length > 0;
 
-  console.log({ __categories_inside_dropdow, __categories });
   return (
     <>
       <div className="flex gap-2.5">
-        <button
-          onClick={() => setActiveCategory(null)}
-          className={cx("category_style", activeCategory === null && "active")}
-        >
-          Alle
-        </button>
         {__categories.map((category, i) => {
-          const isActive = activeCategory === category;
+          const isActive = activeCategory?.value === category.value;
           return (
             <button
               onClick={() => setActiveCategory(category)}
               className={cx("category_style", isActive && "active")}
               key={i}
             >
-              {category}
+              {category.label}
             </button>
           );
         })}
@@ -89,7 +83,7 @@ const HeaderCategories = () => {
           <div className="absolute top-full right-0 w-[160px] pt-4 hidden group-hover:block">
             <div className="bg-white rounded-xl tooltip_shadow py-3 space-y-1">
               {__categories_inside_dropdow.map((category, i) => {
-                const isActive = activeCategory === category;
+                const isActive = activeCategory?.value === category.value;
                 return (
                   <button
                     key={i}
@@ -99,7 +93,7 @@ const HeaderCategories = () => {
                       isActive && "active",
                     )}
                   >
-                    {category}
+                    {category.label}
                   </button>
                 );
               })}

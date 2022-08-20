@@ -50,7 +50,7 @@ const ResultsPageMobileHeader = () => {
 
         <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-none">
           {categories.map((category, i) => {
-            const isActive = activeCategory === category;
+            const isActive = activeCategory?.value === category.value;
             return (
               <button
                 onClick={() => setActiveCategory(category)}
@@ -60,7 +60,7 @@ const ResultsPageMobileHeader = () => {
                 )}
                 key={i}
               >
-                {category}
+                {category.label}
               </button>
             );
           })}

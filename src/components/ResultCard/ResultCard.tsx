@@ -11,7 +11,7 @@ import { MdReport } from "react-icons/md";
 const btnFlat =
   "flex items-center gap-2 text-[15px] font-medium leading-[18px] text-gray group-hover:text-dark duration-150 cursor-pointer";
 
-const ResultCard = ({ id }: { id: number }) => {
+const ResultCard = ({ id, formatted_address }: any) => {
   const router = useRouter();
   const [isOpenReportModal, setIsOpenReportModal] = useState(false);
 
@@ -67,7 +67,7 @@ const ResultCard = ({ id }: { id: number }) => {
           </div>
           <div className="p-4 pt-3 bg-[#F5F5F5]">
             <h3 className="text-[20px] leading-[24px] font-bold text-dark mb-3">
-              The criminal dinner Ludwigshafen
+              {formatted_address}
             </h3>
 
             <div className="flex items-center text-sm text-gray gap-2 mb-5">

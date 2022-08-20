@@ -1,4 +1,5 @@
 import {
+  CategoryType,
   FooterLink,
   PriceType,
   SearchInRadiousOption,
@@ -7,17 +8,51 @@ import {
 import classnames from "classnames";
 
 export const cx = classnames;
-export const categories = [
-  "Outdoor",
-  "Kultur",
-  "Entertainment",
-  "Sport",
-  "Feste & Märkte",
-  "Abenteuer",
-  "Bars & Clubs",
-  "Essen & Trinken",
-  "Erholung",
-  "Sonstiges",
+export const categories: CategoryType[] = [
+  {
+    label: "Alle",
+    value: "Alle",
+  },
+  {
+    label: "Outdoor",
+    value: "Outdoor",
+  },
+  {
+    label: "Kultur",
+    value: "Kultur",
+  },
+  {
+    label: "Entertainment",
+    value: "Entertainment",
+  },
+  {
+    label: "Sport",
+    value: "Sport",
+  },
+  {
+    label: "Feste & Märkte",
+    value: "Feste & Märkte",
+  },
+  {
+    label: "Abenteuer",
+    value: "Abenteuer",
+  },
+  {
+    label: "Bars & Clubs",
+    value: "Bars & Clubs",
+  },
+  {
+    label: "Essen & Trinken",
+    value: "Essen & Trinken",
+  },
+  {
+    label: "Erholung",
+    value: "Erholung",
+  },
+  {
+    label: "Sonstiges",
+    value: "Sonstiges",
+  },
 ];
 
 export const footerLinks: FooterLink[] = [

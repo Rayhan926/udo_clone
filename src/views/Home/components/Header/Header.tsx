@@ -10,7 +10,7 @@ const Header = () => {
         <SiteLogo />
         {/* Logo --End-- */}
 
-        <div className="h-full flex items-center grow">
+        <div className="h-full flex items-center grow max-w-[800px]">
           <HeaderSearchBar />
         </div>
       </div>
