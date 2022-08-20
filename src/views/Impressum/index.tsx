@@ -69,7 +69,11 @@ const Impressum = () => {
               Die Europäische Kommission stellt eine Plattform zur
               Online-Streitbeilegung (OS) bereit:
             </div>
-            <a href="https://ec.europa.eu/consumers/odr" target="_blank">
+            <a
+              href="https://ec.europa.eu/consumers/odr"
+              target="_blank"
+              rel="noreferrer"
+            >
               {" "}
               https://ec.europa.eu/consumers/odr
             </a>
@@ -193,7 +197,7 @@ const Impressum = () => {
               <a
                 href="https://www.govdata.de/dl-de/zero-2-0"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 Datenlizenz Deutschland – Zero – Version 2.0
               </a>
@@ -204,7 +208,7 @@ const Impressum = () => {
               <a
                 href="https://creativecommons.org/licenses/by/4.0/deed.de"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 Namensnennung 4.0 Deutschland
               </a>
@@ -215,7 +219,7 @@ const Impressum = () => {
               <a
                 href="https://creativecommons.org/licenses/by-sa/3.0/de/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 Weitergabe unter gleichen Bedingungen 3.0 Deutschland
               </a>
@@ -226,7 +230,7 @@ const Impressum = () => {
               <a
                 href="https://creativecommons.org/publicdomain/zero/1.0/deed.de"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 Creative Commons Zero
               </a>
@@ -237,7 +241,7 @@ const Impressum = () => {
               <a
                 href="https://creativecommons.org/licenses/by/3.0/de/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 Namensnennung 3.0 Deutschland
               </a>
@@ -248,7 +252,7 @@ const Impressum = () => {
               <a
                 href="https://opendatacommons.org/licenses/odbl/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 Open Database License
               </a>

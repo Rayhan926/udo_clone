@@ -163,7 +163,7 @@ const Privacy = () => {
               <a
                 href="http://www.google.com/analytics/terms/de.html"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 http://www.google.com/analytics/terms/de.html
               </a>{" "}
@@ -171,7 +171,7 @@ const Privacy = () => {
               <a
                 href="https://www.google.de/intl/de/policies/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 https://www.google.de/intl/de/policies/
               </a>
@@ -186,7 +186,7 @@ const Privacy = () => {
               <a
                 href="https://tools.google.com/dlpage/gaoptout?hl=de"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 https://tools.google.com/dlpage/gaoptout?hl=de
               </a>{" "}
@@ -205,7 +205,7 @@ const Privacy = () => {
               <a
                 href="https://support.google.com/analytics/answer/6004245?hl=de"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 https://support.google.com/analytics/answer/6004245?hl=de
               </a>
@@ -220,11 +220,7 @@ const Privacy = () => {
             <p>
               Auf dieser Website werden unter Einsatz der
               Webanalysedienst-Software Matomo (
-              <a
-                href="http://www.matomo.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="http://www.matomo.org" target="_blank" rel="noreferrer">
                 www.matomo.org
               </a>
               ), einem Dienst des Anbieters InnoCraft Ltd., 150 Willis St, 6011
@@ -257,7 +253,7 @@ const Privacy = () => {
               <a
                 href="https://www.google.de/intl/de/policies/privacy/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 https://www.google.de/intl/de/policies/privacy/
               </a>{" "}
@@ -268,7 +264,7 @@ const Privacy = () => {
               <a
                 href="https://www.google.com/settings/ads/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 https://www.google.com/settings/ads/
               </a>
@@ -355,13 +351,18 @@ const Privacy = () => {
               Sie können auch die Cookies vieler Unternehmen und Funktionen
               einzeln verwalten, die für Werbung eingesetzt werden. Verwenden
               Sie dazu die entsprechenden Nutzertools, abrufbar unter{" "}
-              <a href="https://www.aboutads.info/choices" target="_blank">
+              <a
+                href="https://www.aboutads.info/choices"
+                target="_blank"
+                rel="noreferrer"
+              >
                 https://www.aboutads.info/choices/
               </a>{" "}
               oder{" "}
               <a
                 href="http://www.youronlinechoices.com/uk/your-ad-choices"
                 target="_blank"
+                rel="noreferrer"
               >
                 http://www.youronlinechoices.com/uk/your-ad-choices
               </a>{" "}
@@ -423,6 +424,7 @@ const Privacy = () => {
               <a
                 href="https://addons.mozilla.org/de/firefox/addon/noscript/"
                 target="_blank"
+                rel="noreferrer"
               >
                 https://addons.mozilla.org/de/firefox/addon/noscript/
               </a>
@@ -510,7 +512,7 @@ const Privacy = () => {
               <a
                 href="https://www.awin.com/de/rechtliches/privacy-policy"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 https://www.awin.com/de/rechtliches/privacy-policy
               </a>{" "}
@@ -621,7 +623,7 @@ const Privacy = () => {
               <a
                 href="https://www.adcell.de/agb"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 https://www.adcell.de/agb
               </a>{" "}
@@ -688,7 +690,7 @@ const Privacy = () => {
               <a
                 href="https://www.belboon.com/de/ueber-uns/datenschutz/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 https://www.belboon.com/de/ueber-uns/datenschutz/
               </a>{" "}
@@ -757,7 +759,7 @@ const Privacy = () => {
               <a
                 href="https://tradetracker.com/de/privacy-policy/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 https://tradetracker.com/de/privacy-policy/
               </a>{" "}
@@ -941,11 +943,7 @@ const Privacy = () => {
               ohne das Erfordernis der Angabe einer besonderen Situation.
               Möchten Sie von Ihrem Widerrufs- oder Widerspruchsrecht Gebrauch
               machen, genügt eine E-Mail{" "}
-              <a
-                href="mailto:info@yeoga.de"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="mailto:info@yeoga.de" target="_blank" rel="noreferrer">
                 info@yeoga.de
               </a>
             </p>
@@ -989,7 +987,7 @@ const Privacy = () => {
               <a
                 href="http://www.datenschutzexperte.de"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 www.datenschutzexperte.de
               </a>{" "}
@@ -1000,7 +998,7 @@ const Privacy = () => {
               <a
                 href="http://www.juraforum.de"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 www.juraforum.de
               </a>{" "}

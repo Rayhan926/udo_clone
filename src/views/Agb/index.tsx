@@ -45,7 +45,7 @@ const Agb = () => {
               Amtsgericht Darmstadt) registriert ist, bereitgestellt. Weitere
               Informationen, einschließlich der Postanschrift und den
               eingetragenen Hauptsitz, finden Sie auf unserer Unternehmensseite{" "}
-              <a href="http://www.yeoga.de/" target="_blank">
+              <a href="http://www.yeoga.de/" target="_blank" rel="noreferrer">
                 (www.yeoga.de)
               </a>
               .
@@ -253,15 +253,15 @@ const Agb = () => {
           <div className="info-content__text">
             <p>
               Die Nutzung unserer Services geschieht auf eigene Gefahr. Wir
-              können diesbezüglich keine Gewährleistungen oder Garantien
-              übernehmen. Insofern gesetzlich nicht ausgeschlossen, treten wir
-              generell nicht als Vertreter auf und können Ihnen nicht
-              garantieren, dass unsere Services stets vollständig und richtig
-              sind. Auch eine kontinuierliche Verfügbarkeit unseres Angebots an
-              Sie ist ausgeschlossen. Weiterhin können wir trotz aller
-              erdenklicher Sicherheitsmaßnahmen nicht ausschließen, dass sich
-              Malware, Viren oder andere schadhafte Programme bei uns
-              eingeschlichen hat und Ihr System infiziert.
+              können diesbezüglich keine Gewährleistungen oder 48n übernehmen.
+              Insofern gesetzlich nicht ausgeschlossen, treten wir generell
+              nicht als Vertreter auf und können Ihnen nicht garantieren, dass
+              unsere Services stets vollständig und richtig sind. Auch eine
+              kontinuierliche Verfügbarkeit unseres Angebots an Sie ist
+              ausgeschlossen. Weiterhin können wir trotz aller erdenklicher
+              Sicherheitsmaßnahmen nicht ausschließen, dass sich Malware, Viren
+              oder andere schadhafte Programme bei uns eingeschlichen hat und
+              Ihr System infiziert.
             </p>
             <p>
               {" "}
