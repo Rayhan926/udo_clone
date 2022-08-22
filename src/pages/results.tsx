@@ -19,7 +19,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     data = null;
   }
 
-  console.log({ server: data });
+  // console.log({ server: data });
 
   return {
     props: {

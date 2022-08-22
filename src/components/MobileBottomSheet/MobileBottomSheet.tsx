@@ -1,7 +1,7 @@
 import { cx } from "@config/constants";
 import { MobileBottomSheetProps } from "@config/types";
-import React, { useEffect, useRef } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { useEffect, useId, useRef } from "react";
+// import { v4 as uuidv4 } from "uuid";
 
 const MobileBottomSheet = ({
   onClose,
@@ -11,7 +11,7 @@ const MobileBottomSheet = ({
 }: MobileBottomSheetProps) => {
   const bottomSheetOverlayRef = useRef<HTMLDivElement>(null!);
 
-  const overlayId = uuidv4();
+  const overlayId = useId();
 
   useEffect(() => {
     const shouldClose = (e: any) => {

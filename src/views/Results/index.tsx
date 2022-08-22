@@ -30,16 +30,16 @@ const Results = ({ data }: any) => {
   const [, setOpenDateSelect] = useOpenDate();
   const [isOpenSelected, setIsOpenSelected] = useSelectOpenFilter();
 
-  const { data: clientData } = useQuery(
-    "get-results",
-    () => client.get(`/frontend/city/?city=${router.query?.city}`),
-    {
-      enabled: !!router.query?.city,
-      retry: false,
-    },
-  );
+  // const { data: clientData } = useQuery(
+  //   "get-results",
+  //   () => client.get(`/frontend/city/?city=${router.query?.city}`),
+  //   {
+  //     enabled: !!router.query?.city,
+  //     retry: false,
+  //   },
+  // );
 
-  console.log({ clientData });
+  // console.log({ clientData });
   return (
     <>
       <ResultPageHeader />
