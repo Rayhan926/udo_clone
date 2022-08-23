@@ -18,7 +18,7 @@ const ResultsPageShare = () => {
       <Tootlip
         open={isOpen}
         onClose={() => setIsOpen(false)}
-        className="top-[calc(100%+14px)] left-1/2 -translate-x-1/2 w-[225px]"
+        className="top-[calc(100%+14px)] right-0 md:right-auto md:left-1/2 md:-translate-x-1/2 w-[225px]"
       >
         <ShareIcons />
       </Tootlip>

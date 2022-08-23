@@ -76,7 +76,7 @@ const Results = ({ data }: any) => {
       <div className="md:hidden container mt-6">
         <div className="flex items-center gap-0">
           <h3 className="text-lg text-dark font-bold">
-            Vorschläge in Mannheim
+            Vorschläge in {router.query?.city}
           </h3>
           <ResultsPageShare />
         </div>

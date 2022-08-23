@@ -2,9 +2,17 @@ import client from "../client";
 import Results from "@views/Results";
 import { GetServerSideProps } from "next";
 import React from "react";
+import Head from "next/head";
 
 const ResultsPage = ({ data }: any) => {
-  return <Results data={data} />;
+  return (
+    <>
+      <Head>
+        <title>Udo - Die Freizeitsuchmaschine</title>
+      </Head>
+      <Results data={data} />
+    </>
+  );
 };
 
 export default ResultsPage;

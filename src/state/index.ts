@@ -76,8 +76,8 @@ export const useFormSubmit = () => {
   const [searchValue] = useSearchInput();
   const [, setOpenSearchSuggetion] = useOpenSearchSuggestionTooltip();
 
-  const formSubmitHandler = (e: React.FormEvent) => {
-    e.preventDefault();
+  const formSubmitHandler = (e?: React.FormEvent) => {
+    e?.preventDefault();
     if (!searchValue) {
       setOpenSearchSuggetion(true);
       return;

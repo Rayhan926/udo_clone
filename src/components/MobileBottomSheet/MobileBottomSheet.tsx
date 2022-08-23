@@ -15,7 +15,6 @@ const MobileBottomSheet = ({
 
   useEffect(() => {
     const shouldClose = (e: any) => {
-      console.log("first");
       if (e.target.id === overlayId) {
         onClose();
       }

@@ -45,3 +45,6 @@ function MyApp({ Component, pageProps }: any) {
 }
 
 export default MyApp;
+
+// Stuttgart
+// Frankfurt am Main

@@ -3,6 +3,7 @@ import SearchInradiusOptions from "@components/SearchWidget/components/SearchInr
 import SearchSuggestionAndUseMyLocation from "@components/SearchWidget/components/SearchSuggestionAndUseMyLocation";
 import { cx } from "@config/constants";
 import {
+  useFormSubmit,
   useOpenSearchRadius,
   useOpenSearchSuggestionTooltip,
   useSearchInput,
@@ -122,6 +123,7 @@ export const MobileSearchInputForm = ({
   setOpen?: (e: any) => void;
   onCrossClick?: () => void;
 }) => {
+  const { formSubmitHandler } = useFormSubmit();
   const [searchValue, setSearchValue] = useSearchInput();
   const inputRef = useRef<HTMLInputElement>(null!);
 
@@ -133,12 +135,12 @@ export const MobileSearchInputForm = ({
   }, [open]);
 
   const onSubmitHandler = (e: any) => {
-    console.log({ e });
     e.preventDefault();
     const value = inputRef.current.value.trim();
 
     setSearchValue(value || "");
     setOpen && setOpen(false);
+    formSubmitHandler();
   };
   return (
     <form className="relative" onSubmit={onSubmitHandler}>
